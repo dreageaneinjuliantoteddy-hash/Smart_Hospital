@@ -136,7 +136,7 @@ with st.form("triage_form"):
         stomach_pain = st.checkbox("stomach pain")
         shortness_breath = st.checkbox("shortness_breath")
     with c4 :
-        nausea = st.checkbox("Nausea")
+        nausea_vomiting = st.checkbox("Nausea")
         dizziness = st.checkbox("Dizziness")
     c5, _, _, _ = st.columns(4)
     with c5 :
@@ -282,12 +282,27 @@ with st.form("triage_form"):
 
 # ── Result ────────────────────────────────────────────────────────────────────
 if submitted:
+    patient = pd.DataFrame([{
     'age' : age,
-    'gender': gende_map.get(gender,0),
+    'gender': gender_map.get(gender,0),
     'fever' : int(fever),
     'cough' : int(cough),
     'headache' : int(headache),
-    'chest_pain': int(chest_pain)
+    'chest_pain': int(chest_pain),
+    'stomache-pain' : int(stomach_pain),
+    'shortness_breath' : int(shortness_breath),
+    'nausea_vomiting'  : int(nausea_vomiting),
+    'dizziness' : int(dizziness),
+    'skin_rash' : int(rash),
+    'tempreature_level' : temp_map.get(temperature_level, 1)
+    'heart_rate_level'  : hr_map.get(Heart_rate_level,1),
+    'duration' : dur_map.get(duration, 1),
+    'asthma' : int(asthma),
+    'hypertension' : int(hypertension),
+    'heart_disease' : int(heart_disease),
+    'chief_compplaint' : cc_map.get(chief_complaint , 9)
+
+    }])
 
 
 
@@ -322,7 +337,17 @@ if submitted:
     # Once this TODO is done, the variables used in the result display section
     # below are: patient, patient_scaled, pred, proba, dept_name, confidence,
     # info — make sure all of them exist before moving on to the display code.
+    
 
+    patient_scaled = patient.copy()
+    patient_scaled[cols_to_scale] = scaler.transform(
+        patient[cols_to_scale]
+    )
+    pred = model.predict(patient_scaled[features])[0]
+    proba = model.predict_proba(patient_scaled[features])[0]
+    dept_name = dept_map_inv[pred]
+    confidence =  proba[pred]*100
+    info = DEPT_INFO[dept_name]
 
     st.markdown("---")
     # TODO (text): replace CODENO28 and CODENO29
@@ -339,6 +364,9 @@ if submitted:
             f'<span style="color:{info["color"]};font-size:14px;">📍</span>'
             f'<span style="font-size:14px;color:#374151;">{step}</span></div>'
             for step in info['next']
+          
+        
+
         )
         # TODO (text): replace CODENO30
         st.markdown(f"""
