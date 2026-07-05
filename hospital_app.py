@@ -125,6 +125,23 @@ with st.form("triage_form"):
     </div>
     """, unsafe_allow_html=True)
 
+    c1, c2, c3, c4 = st,columns(4)
+    with c1 :
+        fever = st.checkbox("fever")
+        cough = st.checkbox("cough")
+    with c2 :
+        headache = st.checkbox("headache")
+        chest_pain = st.checkbox("Chest pain")
+    with c3 :
+        stomach_pain = st.checkbox("stomach pain")
+        shortness_breath = st.checkbox("shortness_breath")
+    with c4 :
+        nausea = st.checkbox("Nausea")
+        dizziness = st.checkbox("Dizziness")
+    C5, _, _, _ = st.columns
+    with c5 :
+        skin_rash = st.checkbox("skin Rash")
+
     # TODO (logic): create 4 columns (st.columns(4)) with 9 symptom checkboxes.
     # The model needs THESE EXACT variable names (boolean type from st.checkbox):
     #   fever, cough, headache, chest_pain, stomach_pain,
@@ -211,10 +228,10 @@ with st.form("triage_form"):
     # TODO (text/color): replace CODENO24 and COLOR6.
     st.markdown("""
     <!-- COLOR6 -->
-    <div style="background:#f60909;border:1px solid #cbdc0d;border-radius:14px;
+    <div style="background:#0925f6;border:1px solid #02fbff;border-radius:14px;
                 padding:20px 24px;margin-bottom:20px;">
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">
-            <span style="background:#25f20a;color:white;border-radius:8px;
+            <span style="background:#0af2e6;color:rgb(255, 255, 255);border-radius:8px;
                          padding:4px 10px;font-size:12px;font-weight:600;">5</span>
             <span style="font-size:16px;font-weight:600;color:#105efa;">CODENO24</span>
         </div>
