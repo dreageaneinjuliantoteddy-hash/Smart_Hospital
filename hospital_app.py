@@ -120,7 +120,7 @@ with st.form("triage_form"):
             <span style="background:#005eff;color:white;border-radius:8px;
                          padding:4px 10px;font-size:12px;font-weight:600;">1</span>
             <span style="font-size:16px;font-weight:600;color:#8eabe6;">What are your main symptoms?</span>
-            <span style="font-size:13px;color:#6b7280;font-style:italic;">select all that apply</span>
+            <span style="font-size:13px;color:#6b728000;font-style:italic;">select all that apply</span>
         </div>
     </div>
     """, unsafe_allow_html=True)
