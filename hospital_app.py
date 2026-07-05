@@ -240,7 +240,7 @@ with st.form("triage_form"):
     with ch2 :
         heart_disease =  st.checkbox("heart disease")
     with ch3 :
-        Asthma =  st.checkbox("Asthma")
+        asthma =  st.checkbox("Asthma")
 
 
     # TODO (logic): create 3 columns with 3 medical history checkboxes:
