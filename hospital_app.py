@@ -229,10 +229,19 @@ with st.form("triage_form"):
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">
             <span style="background:#25f20a;color:white;border-radius:8px;
                          padding:4px 10px;font-size:12px;font-weight:600;">4</span>
-            <span style="font-size:16px;font-weight:600;color:#105efa;">CODENO20</span>
+            <span style="font-size:16px;font-weight:600;color:#105efa;">Do you have any off the following ?</span>
         </div>
     </div>
     """, unsafe_allow_html=True)
+
+    ch1, ch2 , ch3,_=st.columns(4)
+    with ch1 :
+        hypertension =  st.checkbox("high blood preasure")
+    with ch2 :
+        heart_disease =  st.checkbox("heart disease")
+    with ch3 :
+        Asthma =  st.checkbox("Asthma")
+
 
     # TODO (logic): create 3 columns with 3 medical history checkboxes:
     #   hypertension, heart_disease, asthma
