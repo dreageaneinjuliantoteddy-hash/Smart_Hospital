@@ -277,10 +277,19 @@ with st.form("triage_form"):
     # Variable names must be EXACTLY: age, gender
 
 
-    submitted = st.form_submit_button("CODENO27 →")
+
+    submitted = st.form_submit_button("AI Recomendation ")
 
 # ── Result ────────────────────────────────────────────────────────────────────
 if submitted:
+    'age' : age,
+    'gender': gende_map.get(gender,0),
+    'fever' : int(fever),
+    'cough' : int(cough),
+    'headache' : int(headache),
+    'chest_pain': int(chest_pain)
+
+
 
     # TODO (logic — core of Day 2): everything from here down to before
     # "st.markdown('---')" is for you to write. Steps:
