@@ -259,10 +259,17 @@ with st.form("triage_form"):
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">
             <span style="background:#0af2e6;color:rgb(255, 255, 255);border-radius:8px;
                          padding:4px 10px;font-size:12px;font-weight:600;">5</span>
-            <span style="font-size:16px;font-weight:600;color:#105efa;">CODENO24</span>
+            <span style="font-size:16px;font-weight:600;color:#105efa;">Patient information</span>
         </div>
     </div>
     """, unsafe_allow_html=True)
+
+    col_age, col_gender = st.columns(2)
+    with col_age:
+        age = st.number_input("age",
+        min_value=1, max_value==120, value =35 )
+    with col_gen :
+        gender = st.selectbox("gender", options=['female', 'male'])
 
     # TODO (logic): create 2 columns with:
     #   age    -> min_value=1, max_value=120, default value=35
