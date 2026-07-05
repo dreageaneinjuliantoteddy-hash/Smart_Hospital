@@ -177,7 +177,7 @@ with st.form("triage_form"):
     with col_cc:
          chief_complaint = st.selectbox("chief_complaint",
          options=list(cc_map.keys()))
-     with col_dur:
+    with col_dur:
          duration = st.selectbox("Duration",
          options=list(cc_map.keys()))
 
