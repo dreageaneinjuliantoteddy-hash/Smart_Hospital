@@ -91,7 +91,7 @@ DEPT_INFO = {
 # TODO (text/color): replace CODENO1-3 and COLOR1 below.
 st.markdown("""
 <!-- COLOR1 -->
-<div style="background:linear-gradient(135deg,#f60606 0%,#4fff0a 60%,#c10cdd 100%);
+<div style="background:linear-gradient(135deg,#0a06f6 0%,#0afbff 60%,#0cc1dd 100%);
             padding:3rem 2rem 2.5rem;margin:-1rem -1rem 2rem;text-align:center;">
     <div style="font-size:14px;font-weight:500;color:rgba(255,255,255,0.7);
                 text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;">
@@ -99,7 +99,7 @@ st.markdown("""
     </div>
     <div style="font-size:36px;font-weight:700;color:#ffffff;margin-bottom:12px;
                 letter-spacing:-0.02em;">
-        SMART HOSPITAL
+        SMART HOSPITAL NAVIGATOR
     </div>
     <div style="font-size:18px;color:rgba(255,255,255,0.85);font-weight:400;">
         Symptoms
@@ -125,7 +125,7 @@ with st.form("triage_form"):
     </div>
     """, unsafe_allow_html=True)
 
-    c1, c2, c3, c4 = st,columns(4)
+    c1, c2, c3, c4 = st.columns(4)
     with c1 :
         fever = st.checkbox("fever")
         cough = st.checkbox("cough")
@@ -138,7 +138,7 @@ with st.form("triage_form"):
     with c4 :
         nausea = st.checkbox("Nausea")
         dizziness = st.checkbox("Dizziness")
-    C5, _, _, _ = st.columns
+    C5, _, _, _ = st.columns(4)
     with c5 :
         skin_rash = st.checkbox("skin Rash")
 
