@@ -289,18 +289,18 @@ if submitted:
     'cough' : int(cough),
     'headache' : int(headache),
     'chest_pain': int(chest_pain),
-    'stomache-pain' : int(stomach_pain),
+    'stomach_pain' : int(stomach_pain),
     'shortness_breath' : int(shortness_breath),
     'nausea_vomiting'  : int(nausea_vomiting),
     'dizziness' : int(dizziness),
     'skin_rash' : int(skin_rash),
-    'tempreature_level' : temp_map.get(temperature_level, 1),
+    'temperature_level' : temp_map.get(temperature_level, 1),
     'heart_rate_level'  : hr_map.get(Heart_rate_level,1),
     'duration' : dur_map.get(duration, 1),
     'asthma' : int(asthma),
     'hypertension' : int(hypertension),
     'heart_disease' : int(heart_disease),
-    'chief_compplaint' : cc_map.get(chief_complaint , 9)
+    'chief_complaint' : cc_map.get(chief_complaint , 9)
 
     }])
 
