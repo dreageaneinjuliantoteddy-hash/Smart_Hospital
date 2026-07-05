@@ -91,15 +91,15 @@ DEPT_INFO = {
 # TODO (text/color): replace CODENO1-3 and COLOR1 below.
 st.markdown("""
 <!-- COLOR1 -->
-<div style="background:linear-gradient(135deg,#067af6 0%,#0ae2ff 60%,#c10cdd 100%);
+<div style="background:linear-gradient(135deg,#f60606 0%,#4fff0a 60%,#c10cdd 100%);
             padding:3rem 2rem 2.5rem;margin:-1rem -1rem 2rem;text-align:center;">
     <div style="font-size:14px;font-weight:500;color:rgba(255,255,255,0.7);
                 text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;">
-         SMART HOSPITAL NAVIGATOR
+        SMART HOSPITAL
     </div>
     <div style="font-size:36px;font-weight:700;color:#ffffff;margin-bottom:12px;
                 letter-spacing:-0.02em;">
-        SMART HOSPITAL NAVIGATION
+        SMART HOSPITAL
     </div>
     <div style="font-size:18px;color:rgba(255,255,255,0.85);font-weight:400;">
         Symptoms
@@ -114,13 +114,13 @@ with st.form("triage_form"):
     # TODO (text/color): replace CODENO4 and COLOR2.
     st.markdown("""
     <!-- COLOR2 -->
-    <div style="background:#ff8888;border:1px solid #bf1e1e;border-radius:14px;
+    <div style="background:#dcb2b2;border:1px solid #dfe4ad;border-radius:14px;
                 padding:20px 24px;margin-bottom:20px;">
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">
-            <span style="background:#f2c4c4;color:rgba(255, 255, 255, 0);border-radius:8px;
+            <span style="background:#b0c8ad;color:white;border-radius:8px;
                          padding:4px 10px;font-size:12px;font-weight:600;">1</span>
-            <span style="font-size:16px;font-weight:600;color:#ffffff00;">WHAT IS YOUR MAIN SYMPTOMS</span>
-            <span style="font-size:13px;color:#ffffff00;font-style:italic;">select all that apply</span>
+            <span style="font-size:16px;font-weight:600;color:#8eabe6;">What are your main symptoms?</span>
+            <span style="font-size:13px;color:#6b7280;font-style:italic;">select all that apply</span>
         </div>
     </div>
     """, unsafe_allow_html=True)
