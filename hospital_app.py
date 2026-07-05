@@ -205,10 +205,10 @@ with st.form("triage_form"):
 
     col_temp , col_hr = st.columns(2)
     with col_temp:
-        temperature_level = st.selectbox("temperature"
+        temperature_level = st.selectbox("temperature",
         options=list(temp_map.keys()))
     with col_temp:
-        Heart_rate_level = st.selectbox("Heart rate "
+        Heart_rate_level = st.selectbox("Heart rate ",
         options=list(hr_map.keys()))
 
 
